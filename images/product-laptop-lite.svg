@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Aurora 14 Lite">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3b82f6"/>
+      <stop offset="1" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="120" cy="110" r="140" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="700" cy="500" r="180" fill="rgba(255,255,255,0.10)"/>
+    <ellipse cx="400" cy="392" rx="230" ry="26" fill="rgba(15,23,42,0.18)"/>
+  <rect x="252" y="168" width="296" height="196" rx="16" fill="#ffffff"/>
+  <rect x="270" y="186" width="260" height="160" rx="9" fill="rgba(15,23,42,0.22)"/>
+  <path d="M206 372 h388 l32 42 h-452 z" fill="#ffffff"/>
+  <text x="400" y="524" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Aurora 14 Lite</text>
+  <text x="400" y="562" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">Ноутбук</text>
+</svg>

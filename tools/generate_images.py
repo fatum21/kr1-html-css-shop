@@ -120,6 +120,13 @@ PRODUCTS = [
     ("product-camera.svg", "SnapLens R6", "Камера", "camera", "#334155", "#1e293b"),
     ("product-speaker.svg", "BoomCube Mini", "Колонка", "speaker", "#ea580c", "#f97316"),
     ("product-router.svg", "AirLink AX6", "Роутер", "router", "#0284c7", "#38bdf8"),
+    ("product-laptop-lite.svg", "Aurora 14 Lite", "Ноутбук", "laptop", "#3b82f6", "#60a5fa"),
+    ("product-laptop-aurora16.svg", "Aurora 16 Max", "Ноутбук", "laptop", "#1d4ed8", "#3b82f6"),
+    ("product-laptop-slatebook.svg", "Slate Book Air", "Ноутбук", "laptop", "#0ea5e9", "#22d3ee"),
+    ("product-laptop-workbook.svg", "WorkBook 15", "Ноутбук", "laptop", "#64748b", "#94a3b8"),
+    ("product-laptop-titan.svg", "Titan GX16", "Ноутбук", "laptop", "#dc2626", "#f97316"),
+    ("product-laptop-angle2.svg", "Aurora 14 Pro", "Вид сбоку", "laptop", "#2b59ff", "#5a7cff"),
+    ("product-laptop-angle3.svg", "Aurora 14 Pro", "Корпус", "laptop", "#1c3fd6", "#4b6bff"),
 ]
 
 for fname, title, subtitle, kind, c1, c2 in PRODUCTS:
