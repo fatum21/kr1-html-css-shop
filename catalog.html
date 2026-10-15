@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог электроники — ТехноМарт</title>
+  <meta name="description" content="Каталог ТехноМарт: ноутбуки, смартфоны, аудио, носимые устройства, игровые консоли и аксессуары. Фильтры по категории и цене.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+        <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="catalog.html" aria-current="page">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Ноутбуки</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="btn btn--primary btn--sm" type="button" data-modal-open="callback-modal">Оставить заявку</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <!-- Хлебные крошки -->
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Каталог</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="catalog" aria-labelledby="catalog-title">
+      <div class="container">
+        <div class="page-head">
+          <div class="page-head__inner">
+            <div>
+              <h1 class="page-head__title" id="catalog-title">Каталог товаров</h1>
+              <p class="page-head__text">Всего 12 моделей электроники в наличии. Используйте фильтры для подбора.</p>
+            </div>
+            <nav class="chips" aria-label="Быстрый выбор категории">
+              <a class="chip chip--active" href="catalog.html">Все</a>
+              <a class="chip" href="category.html">Ноутбуки</a>
+              <a class="chip" href="catalog.html">Аудио</a>
+              <a class="chip" href="catalog.html">Гаджеты</a>
+            </nav>
+          </div>
+        </div>
+
+        <div class="catalog__layout">
+          <!-- Боковая панель фильтров (aside, sticky) -->
+          <aside class="catalog__sidebar" aria-label="Фильтры каталога">
+            <form class="filter" action="#" method="get">
+              <h2 class="filter__title">Фильтры</h2>
+
+              <fieldset class="filter__group">
+                <legend class="filter__legend">Категория</legend>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="cat" value="laptops" checked>
+                  <span class="filter__label">Ноутбуки</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="cat" value="phones">
+                  <span class="filter__label">Смартфоны и планшеты</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="cat" value="audio" checked>
+                  <span class="filter__label">Аудио</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="cat" value="wearables">
+                  <span class="filter__label">Носимые устройства</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="cat" value="games">
+                  <span class="filter__label">Игры и консоли</span>
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__group">
+                <legend class="filter__legend">Цена, ₽</legend>
+                <label class="filter__item" for="price-max">
+                  <span class="filter__label">До 150 000 ₽</span>
+                  <input class="filter__range" id="price-max" type="range" name="price" min="5000" max="150000" step="5000" value="150000">
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__group">
+                <legend class="filter__legend">Метки</legend>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="tag" value="new">
+                  <span class="filter__label">Новинки</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="tag" value="hit">
+                  <span class="filter__label">Хиты продаж</span>
+                </label>
+                <label class="filter__item">
+                  <input class="filter__input" type="checkbox" name="tag" value="discount">
+                  <span class="filter__label">Со скидкой</span>
+                </label>
+              </fieldset>
+
+              <div class="order-form__actions">
+                <button class="btn btn--primary btn--block" type="submit">Применить</button>
+                <button class="btn btn--ghost btn--block" type="reset">Сбросить</button>
+              </div>
+            </form>
+          </aside>
+
+          <!-- Сетка карточек -->
+          <div class="catalog__content">
+            <div class="catalog__toolbar">
+              <p class="catalog__count">Найдено: <strong>12</strong> товаров</p>
+              <div class="catalog__sort">
+                <label class="order-form__label" for="sort">Сортировка:</label>
+                <select class="order-form__select select--auto" id="sort" name="sort">
+                  <option>По популярности</option>
+                  <option>Сначала дешёвые</option>
+                  <option>Сначала дорогие</option>
+                  <option>По рейтингу</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="product-grid">
+              <article class="product-card product-card--featured">
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-laptop.svg" alt="Ноутбук Aurora 14 Pro" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Ноутбуки</p>
+                  <h3 class="product-card__title"><a href="product.html">Ноутбук Aurora 14 Pro</a></h3>
+                  <p class="product-card__description">14&quot; 2.8K, 16 ГБ, SSD 1 ТБ, до 18 часов автономности.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating__count">(128)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">129 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-smartphone.svg" alt="Смартфон Nexus X5" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Смартфоны</p>
+                  <h3 class="product-card__title"><a href="product.html">Смартфон Nexus X5</a></h3>
+                  <p class="product-card__description">6.7&quot; AMOLED, 8 ГБ, 256 ГБ, камера 50 МП.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating__count">(94)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">74 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card product-card--discount">
+                <span class="product-card__badge product-card__badge--discount">−25%</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-headphones.svg" alt="Наушники SonicBuds Pro" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Аудио</p>
+                  <h3 class="product-card__title"><a href="product.html">Наушники SonicBuds Pro</a></h3>
+                  <p class="product-card__description">Шумоподавление, до 32 часов с кейсом.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.6 <span class="rating__count">(211)</span></p>
+                  <div class="product-card__meta">
+                    <div class="product-card__prices">
+                      <span class="product-card__price">12 990 ₽</span>
+                      <span class="product-card__price-old">17 320 ₽</span>
+                    </div>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge">Топ</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-watch.svg" alt="Умные часы Pulse S2" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Носимые устройства</p>
+                  <h3 class="product-card__title"><a href="product.html">Умные часы Pulse S2</a></h3>
+                  <p class="product-card__description">AMOLED, пульсометр, GPS, 14 дней работы.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.7 <span class="rating__count">(76)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">18 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-tablet.svg" alt="Планшет Slate 11" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Планшеты</p>
+                  <h3 class="product-card__title"><a href="product.html">Планшет Slate 11</a></h3>
+                  <p class="product-card__description">11&quot; 120 Гц, 128 ГБ, поддержка стилуса.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.5 <span class="rating__count">(58)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">44 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-console.svg" alt="Игровая консоль Vortex One" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Игры и консоли</p>
+                  <h3 class="product-card__title"><a href="product.html">Игровая консоль Vortex One</a></h3>
+                  <p class="product-card__description">4K HDR, SSD 1 ТБ, геймпад в комплекте.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating__count">(302)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">59 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card product-card--discount">
+                <span class="product-card__badge product-card__badge--discount">−15%</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-monitor.svg" alt="Монитор ViewPro 27" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Мониторы</p>
+                  <h3 class="product-card__title"><a href="product.html">Монитор ViewPro 27&quot;</a></h3>
+                  <p class="product-card__description">2K IPS, 165 Гц, 1 мс, поддержка HDR.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.6 <span class="rating__count">(41)</span></p>
+                  <div class="product-card__meta">
+                    <div class="product-card__prices">
+                      <span class="product-card__price">32 990 ₽</span>
+                      <span class="product-card__price-old">38 810 ₽</span>
+                    </div>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-keyboard.svg" alt="Механическая клавиатура MechType K70" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Аксессуары</p>
+                  <h3 class="product-card__title"><a href="product.html">Клавиатура MechType K70</a></h3>
+                  <p class="product-card__description">Механика, RGB-подсветка, горячие клавиши.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.5 <span class="rating__count">(33)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">8 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge product-card__badge--hit">Хит</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-mouse.svg" alt="Игровая мышь GlideX Pro" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Аксессуары</p>
+                  <h3 class="product-card__title"><a href="product.html">Мышь GlideX Pro</a></h3>
+                  <p class="product-card__description">26 000 DPI, беспроводная, до 70 часов работы.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating__count">(87)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">5 490 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <span class="product-card__badge product-card__badge--new">Новинка</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-camera.svg" alt="Беззеркальная камера SnapLens R6" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Фото и видео</p>
+                  <h3 class="product-card__title"><a href="product.html">Камера SnapLens R6</a></h3>
+                  <p class="product-card__description">24 МП, 4K 60 fps, стабилизация матрицы.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.7 <span class="rating__count">(19)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">89 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card product-card--discount">
+                <span class="product-card__badge product-card__badge--discount">−20%</span>
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-speaker.svg" alt="Портативная колонка BoomCube Mini" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Аудио</p>
+                  <h3 class="product-card__title"><a href="product.html">Колонка BoomCube Mini</a></h3>
+                  <p class="product-card__description">Водозащита IPX7, 20 часов, Bluetooth 5.3.</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.4 <span class="rating__count">(64)</span></p>
+                  <div class="product-card__meta">
+                    <div class="product-card__prices">
+                      <span class="product-card__price">6 990 ₽</span>
+                      <span class="product-card__price-old">8 740 ₽</span>
+                    </div>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+
+              <article class="product-card">
+                <a class="product-card__media" href="product.html">
+                  <img class="product-card__image" src="images/product-router.svg" alt="Wi-Fi роутер AirLink AX6" width="800" height="600" loading="lazy">
+                </a>
+                <div class="product-card__body">
+                  <p class="product-card__category">Сетевое оборудование</p>
+                  <h3 class="product-card__title"><a href="product.html">Роутер AirLink AX6600</a></h3>
+                  <p class="product-card__description">Wi-Fi 6, 2.5G порт, покрытие до 200 м².</p>
+                  <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.5 <span class="rating__count">(28)</span></p>
+                  <div class="product-card__meta">
+                    <span class="product-card__price">11 990 ₽</span>
+                    <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid container">
+      <div class="site-footer__col">
+        <a class="site-header__logo site-header__logo--light" href="index.html">
+          <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+          <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+        </a>
+        <p class="site-footer__text">Интернет-магазин электроники с 2015 года. Официальная гарантия, рассрочка и доставка по всей России.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Каталог</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Все товары</a></li>
+          <li><a class="site-footer__link" href="category.html">Ноутбуки</a></li>
+          <li><a class="site-footer__link" href="product.html">Aurora 14 Pro</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Свяжитесь с нами</h2>
+        <p class="site-footer__text">Москва, ул. Программистов, 15<br>+7 (495) 000-00-00<br>hello@technomart.example</p>
+        <a class="site-footer__link" href="contacts.html">Страница контактов →</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© <span data-current-year>2026</span> ТехноМарт. Контрольная работа №1.</p>
+      <p>Ларионов Роман Алексеевич, ЭФБО-15-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+  <dialog class="modal" id="callback-modal" aria-labelledby="callback-modal-title">
+    <form class="order-form" action="#" method="post">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="callback-modal-title">Быстрая заявка</h2>
+      <p class="modal__text">Оставьте контакты — менеджер перезвонит в течение 15 минут.</p>
+      <div class="order-form__grid">
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-name">Имя <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-name" name="name" type="text" required placeholder="Иван" autocomplete="name">
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-phone">Телефон <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
+        </div>
+        <div class="order-form__field order-form__field--full">
+          <label class="order-form__checkbox">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--primary" type="submit">Отправить</button>
+        <button class="btn btn--ghost" type="button" data-modal-close>Отмена</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -3,36 +3,401 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Каталог товаров</title>
+  <title>ТехноМарт — интернет-магазин электроники | Главная</title>
+  <meta name="description" content="ТехноМарт — интернет-магазин электроники: ноутбуки, смартфоны, аудио и гаджеты с гарантией 2 года, доставкой по России и рассрочкой 0%.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
-  <header>
-    <h1>Учебный интернет-магазин</h1>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+        <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+      </a>
+
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Ноутбуки</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button class="btn btn--primary btn--sm" type="button" data-modal-open="callback-modal">Оставить заявку</button>
+      </div>
+    </div>
   </header>
 
-  <main>
-    <section>
-      <h2>Главная страница проекта</h2>
-      <p>
-        Это стартовая страница учебного frontend-проекта.
-        В дальнейшем здесь будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг.
-      </p>
+  <main id="main">
+    <!-- Hero-блок -->
+    <section class="hero">
+      <div class="hero__inner container">
+        <div class="hero__content">
+          <p class="hero__eyebrow">🚚 Бесплатная доставка от 5 000 ₽</p>
+          <h1 class="hero__title">Электроника, которой <span class="hero__accent">можно доверять</span></h1>
+          <p class="hero__text">
+            Ноутбуки, смартфоны, аудио и умные гаджеты от проверенных брендов.
+            Официальная гарантия, рассрочка 0% и возврат в течение 30 дней.
+          </p>
+          <div class="hero__actions">
+            <a class="btn btn--primary btn--lg" href="catalog.html">Перейти в каталог</a>
+            <button class="btn btn--outline btn--lg" type="button" data-modal-open="callback-modal">Получить консультацию</button>
+          </div>
+          <ul class="hero__stats">
+            <li class="hero-stat">
+              <span class="hero-stat__value">12 000+</span>
+              <span class="hero-stat__label">товаров в наличии</span>
+            </li>
+            <li class="hero-stat">
+              <span class="hero-stat__value">4.9 / 5</span>
+              <span class="hero-stat__label">средняя оценка</span>
+            </li>
+            <li class="hero-stat">
+              <span class="hero-stat__value">24 часа</span>
+              <span class="hero-stat__label">доставка по Москве</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <img class="hero__image" src="images/hero-devices.svg" alt="Витрина с ноутбуком, смартфоном и другой электроникой" width="640" height="480">
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>О проекте</h2>
-      <p>
-        В рамках данного проекта будет разработан многостраничный сайт
-        интернет-магазина или каталога услуг. Проект будет постепенно
-        расширяться на следующих практических занятиях.
-      </p>
+    <!-- Преимущества -->
+    <section class="section" id="advantages" aria-labelledby="advantages-title">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__eyebrow">Преимущества</span>
+          <h2 class="section__title" id="advantages-title">Почему покупают у нас</h2>
+          <p class="section__subtitle">Мы отвечаем за качество каждого товара и удобство каждой покупки.</p>
+        </div>
+
+        <div class="advantages__grid">
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">🛡️</div>
+            <h3 class="advantage-card__title">Гарантия 2 года</h3>
+            <p class="advantage-card__text">Официальная гарантия производителя на всю технику без исключений.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">🚚</div>
+            <h3 class="advantage-card__title">Быстрая доставка</h3>
+            <p class="advantage-card__text">Курьером по Москве за 24 часа, по России — от 2 дней.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">💳</div>
+            <h3 class="advantage-card__title">Рассрочка 0%</h3>
+            <p class="advantage-card__text">Оформите покупку на 6 или 12 месяцев без переплаты и переплат по процентам.</p>
+          </article>
+          <article class="advantage-card">
+            <div class="advantage-card__icon" aria-hidden="true">↩️</div>
+            <h3 class="advantage-card__title">Возврат 30 дней</h3>
+            <p class="advantage-card__text">Не подошло — вернём деньги в течение 30 дней после покупки.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Популярные товары -->
+    <section class="section section--alt" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Хиты продаж</span>
+          <h2 class="section__title" id="popular-title">Популярные товары</h2>
+          <p class="section__subtitle">Устройства, которые чаще всего выбирают наши покупатели.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card product-card--featured">
+            <span class="product-card__badge product-card__badge--hit">Хит</span>
+            <a class="product-card__media" href="product.html">
+              <img class="product-card__image" src="images/product-laptop.svg" alt="Ноутбук Aurora 14 Pro" width="800" height="600" loading="lazy">
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__category">Ноутбуки</p>
+              <h3 class="product-card__title"><a href="product.html">Ноутбук Aurora 14 Pro</a></h3>
+              <p class="product-card__description">14&quot; 2.8K, 16 ГБ, SSD 1 ТБ, до 18 часов автономной работы.</p>
+              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating__count">(128 отзывов)</span></p>
+              <div class="product-card__meta">
+                <span class="product-card__price">129 990 ₽</span>
+                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-card__badge product-card__badge--new">Новинка</span>
+            <a class="product-card__media" href="product.html">
+              <img class="product-card__image" src="images/product-smartphone.svg" alt="Смартфон Nexus X5" width="800" height="600" loading="lazy">
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__category">Смартфоны</p>
+              <h3 class="product-card__title"><a href="product.html">Смартфон Nexus X5</a></h3>
+              <p class="product-card__description">6.7&quot; AMOLED 120 Гц, 256 ГБ, тройная камера 50 МП.</p>
+              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating__count">(94 отзыва)</span></p>
+              <div class="product-card__meta">
+                <span class="product-card__price">74 990 ₽</span>
+                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card product-card--discount">
+            <span class="product-card__badge product-card__badge--discount">−25%</span>
+            <a class="product-card__media" href="product.html">
+              <img class="product-card__image" src="images/product-headphones.svg" alt="Наушники SonicBuds Pro" width="800" height="600" loading="lazy">
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__category">Аудио</p>
+              <h3 class="product-card__title"><a href="product.html">Наушники SonicBuds Pro</a></h3>
+              <p class="product-card__description">Активное шумоподавление, до 32 часов работы с кейсом.</p>
+              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.6 <span class="rating__count">(211 отзывов)</span></p>
+              <div class="product-card__meta">
+                <div class="product-card__prices">
+                  <span class="product-card__price">12 990 ₽</span>
+                  <span class="product-card__price-old">17 320 ₽</span>
+                </div>
+                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <span class="product-card__badge">Топ</span>
+            <a class="product-card__media" href="product.html">
+              <img class="product-card__image" src="images/product-watch.svg" alt="Умные часы Pulse S2" width="800" height="600" loading="lazy">
+            </a>
+            <div class="product-card__body">
+              <p class="product-card__category">Носимые устройства</p>
+              <h3 class="product-card__title"><a href="product.html">Умные часы Pulse S2</a></h3>
+              <p class="product-card__description">AMOLED-экран, пульсометр, GPS и 14 дней автономности.</p>
+              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.7 <span class="rating__count">(76 отзывов)</span></p>
+              <div class="product-card__meta">
+                <span class="product-card__price">18 990 ₽</span>
+                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p class="u-mt-xl u-center">
+          <a class="btn btn--primary" href="catalog.html">Смотреть весь каталог</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Категории -->
+    <section class="section" aria-labelledby="categories-title">
+      <div class="container">
+        <div class="section__header">
+          <span class="section__eyebrow">Категории</span>
+          <h2 class="section__title" id="categories-title">Выберите категорию</h2>
+          <p class="section__subtitle">Быстрый переход к нужному разделу каталога.</p>
+        </div>
+        <nav class="chips" aria-label="Категории товаров">
+          <a class="chip chip--active" href="category.html">Ноутбуки</a>
+          <a class="chip" href="catalog.html">Смартфоны</a>
+          <a class="chip" href="catalog.html">Аудио</a>
+          <a class="chip" href="catalog.html">Носимые устройства</a>
+          <a class="chip" href="catalog.html">Игры и консоли</a>
+          <a class="chip" href="catalog.html">Аксессуары</a>
+        </nav>
+      </div>
+    </section>
+
+    <!-- Спецпредложение (aside) -->
+    <section class="section">
+      <div class="container">
+        <aside class="promo" aria-label="Спецпредложение месяца">
+          <div>
+            <span class="section__eyebrow promo__eyebrow">Спецпредложение</span>
+            <h2 class="promo__title">Скидка до 30% на игровые консоли и аксессуары</h2>
+            <p class="promo__text">Успейте до конца месяца — количество товаров ограничено.</p>
+          </div>
+          <div class="promo__actions">
+            <a class="btn btn--accent btn--lg" href="catalog.html">Забрать скидку</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section class="section section--alt" aria-labelledby="reviews-title">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__eyebrow">Отзывы</span>
+          <h2 class="section__title" id="reviews-title">Что говорят покупатели</h2>
+        </div>
+        <div class="reviews__grid">
+          <article class="review-card">
+            <div class="review-card__head">
+              <span class="review-card__avatar" aria-hidden="true">А</span>
+              <div>
+                <h3 class="review-card__author">Анна К.</h3>
+                <span class="review-card__role">Ноутбук Aurora 14 Pro</span>
+              </div>
+            </div>
+            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 5.0</p>
+            <p class="review-card__text">Заказ привезли на следующий день, всё в идеальной упаковке. Ноутбук быстрый и тихий — рекомендую!</p>
+          </article>
+          <article class="review-card">
+            <div class="review-card__head">
+              <span class="review-card__avatar" aria-hidden="true">Д</span>
+              <div>
+                <h3 class="review-card__author">Дмитрий П.</h3>
+                <span class="review-card__role">Наушники SonicBuds Pro</span>
+              </div>
+            </div>
+            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.0</p>
+            <p class="review-card__text">Хорошее шумоподавление за свои деньги. Менеджер помог выбрать модель под мои задачи.</p>
+          </article>
+          <article class="review-card">
+            <div class="review-card__head">
+              <span class="review-card__avatar" aria-hidden="true">М</span>
+              <div>
+                <h3 class="review-card__author">Мария С.</h3>
+                <span class="review-card__role">Смартфон Nexus X5</span>
+              </div>
+            </div>
+            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 5.0</p>
+            <p class="review-card__text">Оформила рассрочку на 12 месяцев, платежи прозрачные. Отличный магазин, вернусь ещё.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section__header section__header--center">
+          <span class="section__eyebrow">Вопросы и ответы</span>
+          <h2 class="section__title" id="faq-title">Часто задаваемые вопросы</h2>
+        </div>
+        <div class="faq">
+          <details class="faq__item">
+            <summary class="faq__question">Сколько идёт доставка по России?</summary>
+            <p class="faq__answer">По Москве — в течение 24 часов. В другие регионы — от 2 до 5 рабочих дней в зависимости от удалённости.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Можно ли оформить рассрочку?</summary>
+            <p class="faq__answer">Да, доступна рассрочка 0% на 6 или 12 месяцев для товаров дороже 5 000 ₽. Оформление занимает несколько минут.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Как работает возврат товара?</summary>
+            <p class="faq__answer">Если товар не подошёл, верните его в течение 30 дней в оригинальной упаковке — мы вернём полную стоимость.</p>
+          </details>
+          <details class="faq__item">
+            <summary class="faq__question">Есть ли гарантия на технику?</summary>
+            <p class="faq__answer">На все товары действует официальная гарантия производителя сроком 2 года.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Контакты (якорь #contacts) -->
+    <section class="section section--alt" id="contacts" aria-labelledby="contacts-title">
+      <div class="container contacts__layout">
+        <div>
+          <div class="section__header">
+            <span class="section__eyebrow">Контакты</span>
+            <h2 class="section__title" id="contacts-title">Мы всегда на связи</h2>
+            <p class="section__subtitle">Ответим на вопросы, поможем с выбором и оформим доставку.</p>
+          </div>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="contacts.html">Все контакты</a>
+            <a class="btn btn--outline" href="order.html">Оформить заявку</a>
+          </div>
+        </div>
+        <aside class="info-panel" aria-label="Режим работы">
+          <h3 class="info-panel__title">Режим работы</h3>
+          <div class="info-panel__list">
+            <div class="info-panel__row"><span>Пн–Пт</span><span class="info-panel__value">09:00 – 21:00</span></div>
+            <div class="info-panel__row"><span>Сб–Вс</span><span class="info-panel__value">10:00 – 19:00</span></div>
+            <div class="info-panel__row"><span>Телефон</span><span class="info-panel__value">+7 (495) 000-00-00</span></div>
+            <div class="info-panel__row"><span>E-mail</span><span class="info-panel__value">hello@technomart.example</span></div>
+          </div>
+        </aside>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 Учебный проект</p>
+  <footer class="site-footer">
+    <div class="site-footer__grid container">
+      <div class="site-footer__col">
+        <a class="site-header__logo site-header__logo--light" href="index.html">
+          <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+          <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+        </a>
+        <p class="site-footer__text">Интернет-магазин электроники с 2015 года. Официальная гарантия, рассрочка и доставка по всей России.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Каталог</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Все товары</a></li>
+          <li><a class="site-footer__link" href="category.html">Ноутбуки</a></li>
+          <li><a class="site-footer__link" href="product.html">Aurora 14 Pro</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Свяжитесь с нами</h2>
+        <p class="site-footer__text">Москва, ул. Программистов, 15<br>+7 (495) 000-00-00<br>hello@technomart.example</p>
+        <a class="site-footer__link" href="contacts.html">Страница контактов →</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© <span data-current-year>2026</span> ТехноМарт. Контрольная работа №1.</p>
+      <p>Ларионов Роман Алексеевич, ЭФБО-15-25</p>
+    </div>
   </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+  <!-- Модальное окно на <dialog> -->
+  <dialog class="modal" id="callback-modal" aria-labelledby="callback-modal-title">
+    <form class="order-form" action="#" method="post">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="callback-modal-title">Быстрая заявка</h2>
+      <p class="modal__text">Оставьте контакты — менеджер ТехноМарт перезвонит в течение 15 минут.</p>
+      <div class="order-form__grid">
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-name">Имя <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-name" name="name" type="text" required placeholder="Иван" autocomplete="name">
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-phone">Телефон <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
+        </div>
+        <div class="order-form__field order-form__field--full">
+          <label class="order-form__checkbox">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--primary" type="submit">Отправить</button>
+        <button class="btn btn--ghost" type="button" data-modal-close>Отмена</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
