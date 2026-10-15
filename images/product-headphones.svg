@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="SonicBuds Pro">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7c3aed"/>
+      <stop offset="1" stop-color="#c026d3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bg)"/>
+  <circle cx="120" cy="110" r="140" fill="rgba(255,255,255,0.12)"/>
+  <circle cx="700" cy="500" r="180" fill="rgba(255,255,255,0.10)"/>
+    <path d="M250 300 v-40 a150 150 0 0 1 300 0 v40" fill="none" stroke="#ffffff" stroke-width="30" stroke-linecap="round"/>
+  <rect x="222" y="286" width="66" height="120" rx="30" fill="#ffffff"/>
+  <rect x="512" y="286" width="66" height="120" rx="30" fill="#ffffff"/>
+  <rect x="236" y="306" width="38" height="80" rx="18" fill="rgba(15,23,42,0.22)"/>
+  <rect x="526" y="306" width="38" height="80" rx="18" fill="rgba(15,23,42,0.22)"/>
+  <text x="400" y="524" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">SonicBuds Pro</text>
+  <text x="400" y="562" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.85)">Наушники</text>
+</svg>

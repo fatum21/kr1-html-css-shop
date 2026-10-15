@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 420" role="img" aria-label="Схема расположения магазина">
+  <rect width="800" height="420" fill="#e9eef7"/>
+  <path d="M0 150 H800" stroke="#ffffff" stroke-width="26"/>
+  <path d="M0 300 H800" stroke="#ffffff" stroke-width="26"/>
+  <path d="M220 0 V420" stroke="#ffffff" stroke-width="26"/>
+  <path d="M560 0 V420" stroke="#ffffff" stroke-width="26"/>
+  <rect x="40" y="40" width="140" height="90" rx="8" fill="#dbe3f2"/>
+  <rect x="270" y="180" width="240" height="90" rx="8" fill="#dbe3f2"/>
+  <rect x="610" y="40" width="150" height="90" rx="8" fill="#dbe3f2"/>
+  <rect x="610" y="330" width="150" height="60" rx="8" fill="#dbe3f2"/>
+  <path d="M395 120 c-30 0 -54 24 -54 54 c0 40 54 96 54 96 s54 -56 54 -96 c0 -30 -24 -54 -54 -54 z" fill="#2b59ff"/>
+  <circle cx="395" cy="174" r="20" fill="#ffffff"/>
+  <text x="395" y="300" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#5a6377">ТехноМарт, Москва, ул. Программистов, 15</text>
+</svg>
