@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты — ТехноМарт</title>
+  <meta name="description" content="Контакты интернет-магазина ТехноМарт: адрес, телефон, e-mail, режим работы и форма обратной связи. Ответим на любой вопрос.">
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body id="top">
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="site-header__inner container">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+        <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+      </a>
+      <nav class="site-nav" aria-label="Основная навигация">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Ноутбуки</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
+        </ul>
+      </nav>
+      <div class="site-header__actions">
+        <button class="btn btn--primary btn--sm" type="button" data-modal-open="callback-modal">Оставить заявку</button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Хлебные крошки">
+        <ol class="breadcrumbs__list">
+          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Контакты</span></li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="section" aria-labelledby="contacts-title">
+      <div class="container">
+        <div class="page-head">
+          <div class="page-head__inner">
+            <div>
+              <h1 class="page-head__title" id="contacts-title">Контакты</h1>
+              <p class="page-head__text">Свяжитесь с нами удобным способом или оставьте сообщение через форму.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <article class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">📍</div>
+            <h2 class="contact-card__title">Адрес магазина</h2>
+            <p class="contact-card__value">Москва, ул. Программистов, 15</p>
+          </article>
+          <article class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">📞</div>
+            <h2 class="contact-card__title">Телефон</h2>
+            <p class="contact-card__value"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
+          </article>
+          <article class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">✉️</div>
+            <h2 class="contact-card__title">E-mail</h2>
+            <p class="contact-card__value"><a href="mailto:hello@technomart.example">hello@technomart.example</a></p>
+          </article>
+          <article class="contact-card">
+            <div class="contact-card__icon" aria-hidden="true">🕘</div>
+            <h2 class="contact-card__title">Режим работы</h2>
+            <p class="contact-card__value">Пн–Пт 09:00–21:00, Сб–Вс 10:00–19:00</p>
+          </article>
+        </div>
+
+        <figure class="map-card">
+          <img class="map-card__image" src="images/map.svg" alt="Схема расположения магазина ТехноМарт на улице Программистов, 15" width="800" height="420">
+          <figcaption class="map-card__caption">5 минут от метро «Университет».</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section section--alt" aria-labelledby="feedback-title">
+      <div class="container contacts__layout">
+        <!-- Форма обратной связи -->
+        <form class="form-card order-form" action="#" method="post">
+          <h2 class="section__title u-mb-lg" id="feedback-title">Форма обратной связи</h2>
+
+          <div class="order-form__grid">
+            <div class="order-form__field">
+              <label class="order-form__label" for="feedback-name">Имя <span class="order-form__required">*</span></label>
+              <input class="order-form__input" id="feedback-name" name="name" type="text" required placeholder="Иван Иванов" autocomplete="name">
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="feedback-email">E-mail <span class="order-form__required">*</span></label>
+              <input class="order-form__input" id="feedback-email" name="email" type="email" required placeholder="ivan@example.com" autocomplete="email">
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__label" for="feedback-topic">Тема обращения</label>
+              <select class="order-form__select" id="feedback-topic" name="topic">
+                <option value="question">Вопрос о товаре</option>
+                <option value="delivery">Доставка и оплата</option>
+                <option value="warranty">Гарантия и возврат</option>
+                <option value="other">Другое</option>
+              </select>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__label" for="feedback-message">Сообщение <span class="order-form__required">*</span></label>
+              <textarea class="order-form__textarea" id="feedback-message" name="message" required placeholder="Опишите ваш вопрос как можно подробнее"></textarea>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__checkbox">
+                <input type="checkbox" name="consent" required>
+                <span>Согласен на обработку персональных данных <span class="order-form__required">*</span></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="order-form__actions">
+            <button class="btn btn--primary btn--lg" type="submit">Отправить сообщение</button>
+            <button class="btn btn--ghost btn--lg" type="reset">Очистить</button>
+          </div>
+        </form>
+
+        <!-- Дополнительная информация -->
+        <aside aria-label="Дополнительная информация">
+          <div class="info-panel">
+            <h2 class="info-panel__title">Реквизиты</h2>
+            <div class="info-panel__list">
+              <div class="info-panel__row"><span>ООО «ТехноМарт»</span></div>
+              <div class="info-panel__row"><span>ИНН</span><span class="info-panel__value">7700000000</span></div>
+              <div class="info-panel__row"><span>ОГРН</span><span class="info-panel__value">1157700000000</span></div>
+              <div class="info-panel__row"><span>Юр. адрес</span><span class="info-panel__value">Москва, ул. Программистов, 15</span></div>
+            </div>
+          </div>
+
+          <div class="info-panel u-mt-lg">
+            <h2 class="info-panel__title">Хотите быстрее?</h2>
+            <p class="site-footer__text u-muted">Оформите заявку — перезвоним в течение 15 минут.</p>
+            <p class="u-m-0"><a class="btn btn--primary btn--block" href="order.html">Оформить заявку</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer__grid container">
+      <div class="site-footer__col">
+        <a class="site-header__logo site-header__logo--light" href="index.html">
+          <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
+          <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
+        </a>
+        <p class="site-footer__text">Интернет-магазин электроники с 2015 года. Официальная гарантия, рассрочка и доставка по всей России.</p>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Каталог</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="catalog.html">Все товары</a></li>
+          <li><a class="site-footer__link" href="category.html">Ноутбуки</a></li>
+          <li><a class="site-footer__link" href="product.html">Aurora 14 Pro</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Покупателям</h2>
+        <ul class="site-footer__list">
+          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
+          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
+          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
+        </ul>
+      </div>
+      <div class="site-footer__col">
+        <h2 class="site-footer__title">Свяжитесь с нами</h2>
+        <p class="site-footer__text">Москва, ул. Программистов, 15<br>+7 (495) 000-00-00<br>hello@technomart.example</p>
+        <a class="site-footer__link" href="contacts.html">Страница контактов →</a>
+      </div>
+    </div>
+    <div class="site-footer__bottom container">
+      <p>© <span data-current-year>2026</span> ТехноМарт. Контрольная работа №1.</p>
+      <p>Ларионов Роман Алексеевич, ЭФБО-15-25</p>
+    </div>
+  </footer>
+
+  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+
+  <dialog class="modal" id="callback-modal" aria-labelledby="callback-modal-title">
+    <form class="order-form" action="#" method="post">
+      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">&times;</button>
+      <h2 class="modal__title" id="callback-modal-title">Быстрая заявка</h2>
+      <p class="modal__text">Оставьте контакты — менеджер перезвонит в течение 15 минут.</p>
+      <div class="order-form__grid">
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-name">Имя <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-name" name="name" type="text" required placeholder="Иван" autocomplete="name">
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="modal-phone">Телефон <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="modal-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
+        </div>
+        <div class="order-form__field order-form__field--full">
+          <label class="order-form__checkbox">
+            <input type="checkbox" name="consent" required>
+            <span>Согласен на обработку персональных данных</span>
+          </label>
+        </div>
+      </div>
+      <div class="modal__actions">
+        <button class="btn btn--primary" type="submit">Отправить</button>
+        <button class="btn btn--ghost" type="button" data-modal-close>Отмена</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
