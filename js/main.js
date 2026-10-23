@@ -1,87 +1,85 @@
 /* =====================================================================
-   kr1-html-css-shop — ТехноМарт
+   Lumen — каталог настольных ламп
    Файл: js/main.js
-   Назначение: минимальная JavaScript-логика (по методическим указаниям
-   JS допускается только для открытия/закрытия модального окна).
-   Весь остальной функционал реализован средствами HTML и CSS.
-
-   Модалка построена на нативном элементе <dialog>, поэтому:
-   - Enter/Space на кнопке открывает окно;
-   - Esc и клик по фону (::backdrop) закрывают окно;
-   - фокус переносится внутрь окна автоматически.
+   Назначение: минимальная логика модального окна и форм.
    ===================================================================== */
-(function () {
-  "use strict";
+document.querySelectorAll("[data-open-order]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialog = document.getElementById(button.dataset.openOrder);
 
-  var modalSelector = "[data-modal-open]";
-  var closeSelector = "[data-modal-close]";
-
-  /* Открытие модального окна */
-  function openModal(modal) {
-    if (typeof modal.showModal === "function") {
-      modal.showModal();
-    } else {
-      // Резервный вариант для очень старых браузеров без <dialog>
-      modal.setAttribute("open", "");
-    }
-    modal.classList.add("modal--opened");
-  }
-
-  /* Закрытие модального окна */
-  function closeModal(modal) {
-    if (typeof modal.close === "function") {
-      modal.close();
-    } else {
-      modal.removeAttribute("open");
-    }
-    modal.classList.remove("modal--opened");
-  }
-
-  /* Делегирование: клик по кнопке с data-modal-open="id-модалки" */
-  document.addEventListener("click", function (event) {
-    var opener = event.target.closest(modalSelector);
-    if (opener) {
-      event.preventDefault();
-      var modal = document.getElementById(opener.getAttribute("data-modal-open"));
-      if (modal) {
-        openModal(modal);
-      }
+    if (!dialog) {
       return;
     }
 
-    /* Клик по кнопке закрытия */
-    var closer = event.target.closest(closeSelector);
-    if (closer) {
-      event.preventDefault();
-      var dialog = closer.closest("dialog, .modal");
-      if (dialog) {
-        closeModal(dialog);
-      }
+    const message = dialog.querySelector(".form-message");
+    if (message) {
+      message.hidden = true;
+    }
+
+    if (typeof dialog.showModal === "function") {
+      dialog.showModal();
+    } else {
+      dialog.setAttribute("open", "");
+    }
+  });
+});
+
+document.querySelectorAll("[data-close-order]").forEach((button) => {
+  button.addEventListener("click", () => {
+    const dialog = button.closest("dialog");
+    if (dialog) {
+      dialog.close();
+    }
+  });
+});
+
+document.querySelectorAll(".order-dialog").forEach((dialog) => {
+  dialog.addEventListener("click", (event) => {
+    if (event.target !== dialog) {
+      return;
+    }
+
+    const rect = dialog.getBoundingClientRect();
+    const isInside =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+
+    if (!isInside) {
+      dialog.close();
+    }
+  });
+});
+
+document.querySelectorAll(".order-form").forEach((form) => {
+  const message = form.querySelector(".form-message");
+
+  form.addEventListener("submit", (event) => {
+    event.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    form.reset();
+
+    if (message) {
+      message.hidden = false;
+      message.scrollIntoView({ block: "nearest" });
     }
   });
 
-  /* Закрытие по клику на подложку (сам элемент <dialog>) */
-  document.querySelectorAll("dialog.modal").forEach(function (modal) {
-    modal.addEventListener("click", function (event) {
-      if (event.target === modal) {
-        closeModal(modal);
-      }
-    });
-
-    /* После успешной отправки формы заявки закрываем окно */
-    var form = modal.querySelector("form");
-    if (form) {
-      form.addEventListener("submit", function (event) {
-        event.preventDefault();
-        closeModal(modal);
-        form.reset();
-      });
+  form.addEventListener("input", () => {
+    if (message) {
+      message.hidden = true;
     }
   });
 
-  /* Текущий год в подвале */
-  var yearNodes = document.querySelectorAll("[data-current-year]");
-  yearNodes.forEach(function (node) {
-    node.textContent = new Date().getFullYear();
+  form.addEventListener("reset", () => {
+    if (message) {
+      message.hidden = true;
+    }
   });
-})();
+});

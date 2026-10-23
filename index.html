@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ТехноМарт — интернет-магазин электроники | Главная</title>
-  <meta name="description" content="ТехноМарт — интернет-магазин электроники: ноутбуки, смартфоны, аудио и гаджеты с гарантией 2 года, доставкой по России и рассрочкой 0%.">
+  <meta name="description" content="Lumen — небольшой каталог настольных ламп для дома и работы. Компактные модели, тёплый свет и понятные характеристики.">
+  <title>Lumen — настольные лампы для дома и работы</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,388 +12,195 @@
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
   <header class="site-header">
-    <div class="site-header__inner container">
-      <a class="site-header__logo" href="index.html">
-        <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
-        <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
-      </a>
-
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Lumen</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Ноутбуки</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="order.html">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="index.html" aria-current="page">Главная</a></li>
+          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li><a class="site-nav__link" href="order.html">Заявка</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link" href="index.html#popular">Популярное</a></li>
         </ul>
       </nav>
-
-      <div class="site-header__actions">
-        <button class="btn btn--primary btn--sm" type="button" data-modal-open="callback-modal">Оставить заявку</button>
-      </div>
     </div>
   </header>
 
   <main id="main">
-    <!-- Hero-блок -->
     <section class="hero">
-      <div class="hero__inner container">
-        <div class="hero__content">
-          <p class="hero__eyebrow">🚚 Бесплатная доставка от 5 000 ₽</p>
-          <h1 class="hero__title">Электроника, которой <span class="hero__accent">можно доверять</span></h1>
-          <p class="hero__text">
-            Ноутбуки, смартфоны, аудио и умные гаджеты от проверенных брендов.
-            Официальная гарантия, рассрочка 0% и возврат в течение 30 дней.
-          </p>
-          <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="catalog.html">Перейти в каталог</a>
-            <button class="btn btn--outline btn--lg" type="button" data-modal-open="callback-modal">Получить консультацию</button>
+      <div class="container hero__inner">
+        <span class="hero__eyebrow">Настольные лампы</span>
+        <h1 class="hero__title">Свет, который удобно настроить под себя</h1>
+        <p class="hero__text">
+          Lumen — небольшой каталог настольных ламп для дома и работы.
+          Компактные модели, тёплый свет и понятные характеристики без лишнего выбора.
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="catalog.html">Перейти в каталог</a>
+          <button class="button button--secondary" type="button" data-open-order="order-dialog">Оставить заявку</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="popular" aria-labelledby="popular-title">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <h2 class="section__title" id="popular-title">Популярные модели</h2>
+            <p class="section__text">Три лампы, которые чаще всего выбирают для рабочего стола и спальни.</p>
           </div>
-          <ul class="hero__stats">
-            <li class="hero-stat">
-              <span class="hero-stat__value">12 000+</span>
-              <span class="hero-stat__label">товаров в наличии</span>
-            </li>
-            <li class="hero-stat">
-              <span class="hero-stat__value">4.9 / 5</span>
-              <span class="hero-stat__label">средняя оценка</span>
-            </li>
-            <li class="hero-stat">
-              <span class="hero-stat__value">24 часа</span>
-              <span class="hero-stat__label">доставка по Москве</span>
-            </li>
-          </ul>
-        </div>
-
-        <div class="hero__media">
-          <img class="hero__image" src="images/hero-devices.svg" alt="Витрина с ноутбуком, смартфоном и другой электроникой" width="640" height="480">
-        </div>
-      </div>
-    </section>
-
-    <!-- Преимущества -->
-    <section class="section" id="advantages" aria-labelledby="advantages-title">
-      <div class="container">
-        <div class="section__header section__header--center">
-          <span class="section__eyebrow">Преимущества</span>
-          <h2 class="section__title" id="advantages-title">Почему покупают у нас</h2>
-          <p class="section__subtitle">Мы отвечаем за качество каждого товара и удобство каждой покупки.</p>
-        </div>
-
-        <div class="advantages__grid">
-          <article class="advantage-card">
-            <div class="advantage-card__icon" aria-hidden="true">🛡️</div>
-            <h3 class="advantage-card__title">Гарантия 2 года</h3>
-            <p class="advantage-card__text">Официальная гарантия производителя на всю технику без исключений.</p>
-          </article>
-          <article class="advantage-card">
-            <div class="advantage-card__icon" aria-hidden="true">🚚</div>
-            <h3 class="advantage-card__title">Быстрая доставка</h3>
-            <p class="advantage-card__text">Курьером по Москве за 24 часа, по России — от 2 дней.</p>
-          </article>
-          <article class="advantage-card">
-            <div class="advantage-card__icon" aria-hidden="true">💳</div>
-            <h3 class="advantage-card__title">Рассрочка 0%</h3>
-            <p class="advantage-card__text">Оформите покупку на 6 или 12 месяцев без переплаты и переплат по процентам.</p>
-          </article>
-          <article class="advantage-card">
-            <div class="advantage-card__icon" aria-hidden="true">↩️</div>
-            <h3 class="advantage-card__title">Возврат 30 дней</h3>
-            <p class="advantage-card__text">Не подошло — вернём деньги в течение 30 дней после покупки.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Популярные товары -->
-    <section class="section section--alt" id="popular" aria-labelledby="popular-title">
-      <div class="container">
-        <div class="section__header">
-          <span class="section__eyebrow">Хиты продаж</span>
-          <h2 class="section__title" id="popular-title">Популярные товары</h2>
-          <p class="section__subtitle">Устройства, которые чаще всего выбирают наши покупатели.</p>
+          <a class="button button--secondary button--small" href="catalog.html">Все модели</a>
         </div>
 
         <div class="product-grid">
-          <article class="product-card product-card--featured">
-            <span class="product-card__badge product-card__badge--hit">Хит</span>
-            <a class="product-card__media" href="product.html">
-              <img class="product-card__image" src="images/product-laptop.svg" alt="Ноутбук Aurora 14 Pro" width="800" height="600" loading="lazy">
-            </a>
-            <div class="product-card__body">
-              <p class="product-card__category">Ноутбуки</p>
-              <h3 class="product-card__title"><a href="product.html">Ноутбук Aurora 14 Pro</a></h3>
-              <p class="product-card__description">14&quot; 2.8K, 16 ГБ, SSD 1 ТБ, до 18 часов автономной работы.</p>
-              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.9 <span class="rating__count">(128 отзывов)</span></p>
+          <article class="product-card">
+            <span class="product-card__badge">Хит</span>
+            <img class="product-card__image" src="images/lamp-one.svg" alt="Настольная лампа Lumen One" width="800" height="500">
+            <div class="product-card__content">
+              <h3 class="product-card__title"><a href="product.html">Lumen One</a></h3>
+              <p class="product-card__text">Компактная лампа с направленным светом для рабочего стола.</p>
               <div class="product-card__meta">
-                <span class="product-card__price">129 990 ₽</span>
-                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                <p class="product-card__price">3 490 ₽</p>
+                <a class="button button--secondary button--small" href="product.html">Подробнее</a>
               </div>
             </div>
           </article>
 
           <article class="product-card">
-            <span class="product-card__badge product-card__badge--new">Новинка</span>
-            <a class="product-card__media" href="product.html">
-              <img class="product-card__image" src="images/product-smartphone.svg" alt="Смартфон Nexus X5" width="800" height="600" loading="lazy">
-            </a>
-            <div class="product-card__body">
-              <p class="product-card__category">Смартфоны</p>
-              <h3 class="product-card__title"><a href="product.html">Смартфон Nexus X5</a></h3>
-              <p class="product-card__description">6.7&quot; AMOLED 120 Гц, 256 ГБ, тройная камера 50 МП.</p>
-              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 4.8 <span class="rating__count">(94 отзыва)</span></p>
+            <span class="product-card__badge product-card__badge--accent">Новинка</span>
+            <img class="product-card__image" src="images/lamp-arc.svg" alt="Настольная лампа Lumen Arc" width="800" height="500">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Lumen Arc</h3>
+              <p class="product-card__text">Модель с изогнутой дугой и круглым абажуром для мягкого света.</p>
               <div class="product-card__meta">
-                <span class="product-card__price">74 990 ₽</span>
-                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="product-card product-card--discount">
-            <span class="product-card__badge product-card__badge--discount">−25%</span>
-            <a class="product-card__media" href="product.html">
-              <img class="product-card__image" src="images/product-headphones.svg" alt="Наушники SonicBuds Pro" width="800" height="600" loading="lazy">
-            </a>
-            <div class="product-card__body">
-              <p class="product-card__category">Аудио</p>
-              <h3 class="product-card__title"><a href="product.html">Наушники SonicBuds Pro</a></h3>
-              <p class="product-card__description">Активное шумоподавление, до 32 часов работы с кейсом.</p>
-              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.6 <span class="rating__count">(211 отзывов)</span></p>
-              <div class="product-card__meta">
-                <div class="product-card__prices">
-                  <span class="product-card__price">12 990 ₽</span>
-                  <span class="product-card__price-old">17 320 ₽</span>
-                </div>
-                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                <p class="product-card__price">5 990 ₽</p>
+                <a class="button button--secondary button--small" href="order.html">Уточнить</a>
               </div>
             </div>
           </article>
 
           <article class="product-card">
-            <span class="product-card__badge">Топ</span>
-            <a class="product-card__media" href="product.html">
-              <img class="product-card__image" src="images/product-watch.svg" alt="Умные часы Pulse S2" width="800" height="600" loading="lazy">
-            </a>
-            <div class="product-card__body">
-              <p class="product-card__category">Носимые устройства</p>
-              <h3 class="product-card__title"><a href="product.html">Умные часы Pulse S2</a></h3>
-              <p class="product-card__description">AMOLED-экран, пульсометр, GPS и 14 дней автономности.</p>
-              <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.7 <span class="rating__count">(76 отзывов)</span></p>
+            <img class="product-card__image" src="images/lamp-mini.svg" alt="Настольная лампа Lumen Mini" width="800" height="500">
+            <div class="product-card__content">
+              <h3 class="product-card__title">Lumen Mini</h3>
+              <p class="product-card__text">Миниатюрная лампа для прикроватной тумбы или небольшого стола.</p>
               <div class="product-card__meta">
-                <span class="product-card__price">18 990 ₽</span>
-                <a class="btn btn--outline btn--sm" href="product.html">Подробнее</a>
+                <p class="product-card__price">2 790 ₽</p>
+                <a class="button button--secondary button--small" href="order.html">Уточнить</a>
               </div>
             </div>
           </article>
         </div>
-
-        <p class="u-mt-xl u-center">
-          <a class="btn btn--primary" href="catalog.html">Смотреть весь каталог</a>
-        </p>
       </div>
     </section>
 
-    <!-- Категории -->
-    <section class="section" aria-labelledby="categories-title">
+    <section class="section section--muted" id="advantages" aria-labelledby="advantages-title">
       <div class="container">
-        <div class="section__header">
-          <span class="section__eyebrow">Категории</span>
-          <h2 class="section__title" id="categories-title">Выберите категорию</h2>
-          <p class="section__subtitle">Быстрый переход к нужному разделу каталога.</p>
-        </div>
-        <nav class="chips" aria-label="Категории товаров">
-          <a class="chip chip--active" href="category.html">Ноутбуки</a>
-          <a class="chip" href="catalog.html">Смартфоны</a>
-          <a class="chip" href="catalog.html">Аудио</a>
-          <a class="chip" href="catalog.html">Носимые устройства</a>
-          <a class="chip" href="catalog.html">Игры и консоли</a>
-          <a class="chip" href="catalog.html">Аксессуары</a>
-        </nav>
-      </div>
-    </section>
-
-    <!-- Спецпредложение (aside) -->
-    <section class="section">
-      <div class="container">
-        <aside class="promo" aria-label="Спецпредложение месяца">
+        <div class="section__head">
           <div>
-            <span class="section__eyebrow promo__eyebrow">Спецпредложение</span>
-            <h2 class="promo__title">Скидка до 30% на игровые консоли и аксессуары</h2>
-            <p class="promo__text">Успейте до конца месяца — количество товаров ограничено.</p>
+            <h2 class="section__title" id="advantages-title">Почему Lumen</h2>
+            <p class="section__text">Простой дизайн, понятные характеристики и несколько базовых моделей.</p>
           </div>
-          <div class="promo__actions">
-            <a class="btn btn--accent btn--lg" href="catalog.html">Забрать скидку</a>
-          </div>
-        </aside>
-      </div>
-    </section>
-
-    <!-- Отзывы -->
-    <section class="section section--alt" aria-labelledby="reviews-title">
-      <div class="container">
-        <div class="section__header section__header--center">
-          <span class="section__eyebrow">Отзывы</span>
-          <h2 class="section__title" id="reviews-title">Что говорят покупатели</h2>
         </div>
-        <div class="reviews__grid">
-          <article class="review-card">
-            <div class="review-card__head">
-              <span class="review-card__avatar" aria-hidden="true">А</span>
-              <div>
-                <h3 class="review-card__author">Анна К.</h3>
-                <span class="review-card__role">Ноутбук Aurora 14 Pro</span>
-              </div>
-            </div>
-            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 5.0</p>
-            <p class="review-card__text">Заказ привезли на следующий день, всё в идеальной упаковке. Ноутбук быстрый и тихий — рекомендую!</p>
+
+        <div class="advantage-grid">
+          <article class="advantage">
+            <h3 class="advantage__title">Тёплый свет</h3>
+            <p class="advantage__text">Лампы с мягким светом 3000 K подходят для работы и вечернего чтения.</p>
           </article>
-          <article class="review-card">
-            <div class="review-card__head">
-              <span class="review-card__avatar" aria-hidden="true">Д</span>
-              <div>
-                <h3 class="review-card__author">Дмитрий П.</h3>
-                <span class="review-card__role">Наушники SonicBuds Pro</span>
-              </div>
-            </div>
-            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★☆</span> 4.0</p>
-            <p class="review-card__text">Хорошее шумоподавление за свои деньги. Менеджер помог выбрать модель под мои задачи.</p>
+          <article class="advantage">
+            <h3 class="advantage__title">Компактные размеры</h3>
+            <p class="advantage__text">Модели занимают немного места на столе и легко перемещаются по дому.</p>
           </article>
-          <article class="review-card">
-            <div class="review-card__head">
-              <span class="review-card__avatar" aria-hidden="true">М</span>
-              <div>
-                <h3 class="review-card__author">Мария С.</h3>
-                <span class="review-card__role">Смартфон Nexus X5</span>
-              </div>
-            </div>
-            <p class="rating"><span class="rating__stars" aria-hidden="true">★★★★★</span> 5.0</p>
-            <p class="review-card__text">Оформила рассрочку на 12 месяцев, платежи прозрачные. Отличный магазин, вернусь ещё.</p>
+          <article class="advantage">
+            <h3 class="advantage__title">Понятный выбор</h3>
+            <p class="advantage__text">Четыре модели с разными абажурами — без десятков лишних параметров.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- FAQ -->
-    <section class="section" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section__header section__header--center">
-          <span class="section__eyebrow">Вопросы и ответы</span>
-          <h2 class="section__title" id="faq-title">Часто задаваемые вопросы</h2>
-        </div>
-        <div class="faq">
-          <details class="faq__item">
-            <summary class="faq__question">Сколько идёт доставка по России?</summary>
-            <p class="faq__answer">По Москве — в течение 24 часов. В другие регионы — от 2 до 5 рабочих дней в зависимости от удалённости.</p>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">Можно ли оформить рассрочку?</summary>
-            <p class="faq__answer">Да, доступна рассрочка 0% на 6 или 12 месяцев для товаров дороже 5 000 ₽. Оформление занимает несколько минут.</p>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">Как работает возврат товара?</summary>
-            <p class="faq__answer">Если товар не подошёл, верните его в течение 30 дней в оригинальной упаковке — мы вернём полную стоимость.</p>
-          </details>
-          <details class="faq__item">
-            <summary class="faq__question">Есть ли гарантия на технику?</summary>
-            <p class="faq__answer">На все товары действует официальная гарантия производителя сроком 2 года.</p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Контакты (якорь #contacts) -->
-    <section class="section section--alt" id="contacts" aria-labelledby="contacts-title">
-      <div class="container contacts__layout">
-        <div>
-          <div class="section__header">
-            <span class="section__eyebrow">Контакты</span>
-            <h2 class="section__title" id="contacts-title">Мы всегда на связи</h2>
-            <p class="section__subtitle">Ответим на вопросы, поможем с выбором и оформим доставку.</p>
-          </div>
-          <div class="hero__actions">
-            <a class="btn btn--primary" href="contacts.html">Все контакты</a>
-            <a class="btn btn--outline" href="order.html">Оформить заявку</a>
-          </div>
-        </div>
-        <aside class="info-panel" aria-label="Режим работы">
-          <h3 class="info-panel__title">Режим работы</h3>
-          <div class="info-panel__list">
-            <div class="info-panel__row"><span>Пн–Пт</span><span class="info-panel__value">09:00 – 21:00</span></div>
-            <div class="info-panel__row"><span>Сб–Вс</span><span class="info-panel__value">10:00 – 19:00</span></div>
-            <div class="info-panel__row"><span>Телефон</span><span class="info-panel__value">+7 (495) 000-00-00</span></div>
-            <div class="info-panel__row"><span>E-mail</span><span class="info-panel__value">hello@technomart.example</span></div>
-          </div>
-        </aside>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="site-footer__grid container">
-      <div class="site-footer__col">
-        <a class="site-header__logo site-header__logo--light" href="index.html">
-          <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
-          <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
-        </a>
-        <p class="site-footer__text">Интернет-магазин электроники с 2015 года. Официальная гарантия, рассрочка и доставка по всей России.</p>
+  <footer class="site-footer" id="contacts">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2 class="site-footer__title">Lumen</h2>
+          <p class="site-footer__text">Небольшой каталог настольных ламп для дома и работы. Учебный проект по HTML и CSS.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="site-footer__link" href="product.html">Lumen One</a></li>
+            <li><a class="site-footer__link" href="order.html">Оставить заявку</a></li>
+            <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Контакты</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="mailto:study@example.ru">study@example.ru</a></li>
+            <li><a class="site-footer__link" href="tel:+79000000000">+7 900 000-00-00</a></li>
+            <li><a class="site-footer__link" href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Каталог</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="catalog.html">Все товары</a></li>
-          <li><a class="site-footer__link" href="category.html">Ноутбуки</a></li>
-          <li><a class="site-footer__link" href="product.html">Aurora 14 Pro</a></li>
-        </ul>
-      </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Покупателям</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
-          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
-          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
-          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
-        </ul>
-      </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Свяжитесь с нами</h2>
-        <p class="site-footer__text">Москва, ул. Программистов, 15<br>+7 (495) 000-00-00<br>hello@technomart.example</p>
-        <a class="site-footer__link" href="contacts.html">Страница контактов →</a>
-      </div>
-    </div>
-    <div class="site-footer__bottom container">
-      <p>© <span data-current-year>2026</span> ТехноМарт. Контрольная работа №1.</p>
-      <p>Ларионов Роман Алексеевич, ЭФБО-15-25</p>
+      <p class="site-footer__bottom">© 2026 Lumen. Учебный проект. Ларионов Роман Алексеевич, ЭФБО-15-25.</p>
     </div>
   </footer>
 
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
+  <dialog class="order-dialog" id="order-dialog" aria-labelledby="order-dialog-title">
+    <button class="order-dialog__close" type="button" data-close-order aria-label="Закрыть окно">&times;</button>
+    <h2 class="order-dialog__title" id="order-dialog-title">Заявка на лампу</h2>
+    <p class="order-dialog__text">Оставьте контакты — поможем выбрать модель и ответим на вопросы.</p>
 
-  <!-- Модальное окно на <dialog> -->
-  <dialog class="modal" id="callback-modal" aria-labelledby="callback-modal-title">
     <form class="order-form" action="#" method="post">
-      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">&times;</button>
-      <h2 class="modal__title" id="callback-modal-title">Быстрая заявка</h2>
-      <p class="modal__text">Оставьте контакты — менеджер ТехноМарт перезвонит в течение 15 минут.</p>
       <div class="order-form__grid">
         <div class="order-form__field">
-          <label class="order-form__label" for="modal-name">Имя <span class="order-form__required">*</span></label>
-          <input class="order-form__input" id="modal-name" name="name" type="text" required placeholder="Иван" autocomplete="name">
+          <label class="order-form__label" for="dialog-name">Имя <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="dialog-name" name="name" type="text" minlength="2" maxlength="50" autocomplete="name" required>
         </div>
         <div class="order-form__field">
-          <label class="order-form__label" for="modal-phone">Телефон <span class="order-form__required">*</span></label>
-          <input class="order-form__input" id="modal-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
+          <label class="order-form__label" for="dialog-email">E-mail <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="dialog-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="dialog-phone">Телефон <span class="order-form__required">*</span></label>
+          <input class="order-form__input" id="dialog-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="\+7\s?[0-9]{3}\s?[0-9]{3}-?[0-9]{2}-?[0-9]{2}" title="Формат: +7 900 000-00-00" autocomplete="tel" required>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="dialog-model">Модель <span class="order-form__required">*</span></label>
+          <select class="order-form__select" id="dialog-model" name="model" required>
+            <option value="">Выберите модель</option>
+            <option value="lumen-one">Lumen One</option>
+            <option value="lumen-arc">Lumen Arc</option>
+            <option value="lumen-mini">Lumen Mini</option>
+            <option value="lumen-classic">Lumen Classic</option>
+          </select>
+        </div>
+        <div class="order-form__field">
+          <label class="order-form__label" for="dialog-date">Желаемая дата связи</label>
+          <input class="order-form__input" id="dialog-date" name="contact-date" type="date">
         </div>
         <div class="order-form__field order-form__field--full">
-          <label class="order-form__checkbox">
-            <input type="checkbox" name="consent" required>
-            <span>Согласен на обработку персональных данных</span>
+          <label class="order-form__label" for="dialog-comment">Комментарий</label>
+          <textarea class="order-form__textarea" id="dialog-comment" name="comment" rows="3" maxlength="300" placeholder="Дополнительная информация"></textarea>
+        </div>
+        <div class="order-form__field order-form__field--full">
+          <label class="order-form__checkbox" for="dialog-consent">
+            <input id="dialog-consent" name="consent" type="checkbox" required>
+            <span>Согласен на обработку персональных данных <span class="order-form__required">*</span></span>
           </label>
         </div>
       </div>
-      <div class="modal__actions">
-        <button class="btn btn--primary" type="submit">Отправить</button>
-        <button class="btn btn--ghost" type="button" data-modal-close>Отмена</button>
+
+      <input type="hidden" name="source" value="index-modal">
+      <p class="form-message" role="status" hidden>Заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
+      <div class="order-form__actions">
+        <button class="button" type="submit">Отправить</button>
+        <button class="button button--secondary" type="button" data-close-order>Закрыть</button>
       </div>
     </form>
   </dialog>

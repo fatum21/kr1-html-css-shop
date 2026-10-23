@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Настольная лампа Lumen Classic</title>
+  <desc id="desc">Схематичное изображение классической настольной лампы с наклонным абажуром и металлическим основанием.</desc>
+  <rect width="800" height="500" fill="#eef1f2"/>
+  <circle cx="530" cy="215" r="125" fill="#f2d37c" opacity="0.18"/>
+  <ellipse cx="390" cy="432" rx="165" ry="22" fill="#c9d0d4"/>
+  <rect x="380" y="235" width="26" height="195" rx="13" fill="#315a74"/>
+  <path d="M393 243 L520 178" stroke="#315a74" stroke-width="24" stroke-linecap="round"/>
+  <path d="M492 140 H610 L575 225 H510 Z" fill="#234357"/>
+  <circle cx="540" cy="223" r="25" fill="#f2d37c"/>
+  <rect x="300" y="414" width="180" height="24" rx="12" fill="#234357"/>
+  <rect x="340" y="404" width="100" height="14" rx="7" fill="#315a74"/>
+  <circle cx="393" cy="243" r="14" fill="#f2d37c"/>
+</svg>

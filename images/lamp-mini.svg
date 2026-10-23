@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Настольная лампа Lumen Mini</title>
+  <desc id="desc">Схематичное изображение миниатюрной настольной лампы с куполообразным абажуром.</desc>
+  <rect width="800" height="500" fill="#eef1f2"/>
+  <circle cx="400" cy="260" r="120" fill="#f2d37c" opacity="0.16"/>
+  <ellipse cx="400" cy="430" rx="125" ry="20" fill="#c9d0d4"/>
+  <rect x="385" y="300" width="30" height="115" rx="15" fill="#315a74"/>
+  <path d="M315 305 A85 85 0 0 1 485 305 Z" fill="#234357"/>
+  <circle cx="400" cy="310" r="24" fill="#f2d37c"/>
+  <rect x="330" y="412" width="140" height="22" rx="11" fill="#234357"/>
+  <circle cx="400" cy="300" r="7" fill="#315a74"/>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" role="img" aria-labelledby="title desc">
+  <title id="title">Настольная лампа Lumen Arc</title>
+  <desc id="desc">Схематичное изображение настольной лампы с изогнутой дугой и круглым абажуром.</desc>
+  <rect width="800" height="500" fill="#eef1f2"/>
+  <circle cx="610" cy="205" r="120" fill="#f2d37c" opacity="0.16"/>
+  <ellipse cx="365" cy="432" rx="145" ry="22" fill="#c9d0d4"/>
+  <path d="M365 420 C355 275 455 155 610 200" fill="none" stroke="#315a74" stroke-width="24" stroke-linecap="round"/>
+  <path d="M555 202 Q610 135 665 202 Z" fill="#234357"/>
+  <circle cx="610" cy="205" r="26" fill="#f2d37c"/>
+  <rect x="285" y="414" width="160" height="24" rx="12" fill="#234357"/>
+  <circle cx="365" cy="414" r="18" fill="#315a74"/>
+  <circle cx="365" cy="414" r="7" fill="#f2d37c"/>
+</svg>

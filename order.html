@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Оформление заявки — ТехноМарт</title>
-  <meta name="description" content="Оформите заявку на покупку электроники в ТехноМарт: укажите имя, e-mail, телефон и товар. Менеджер свяжется с вами в течение 15 минут.">
+  <meta name="description" content="Оставить заявку на настольную лампу Lumen: выбор модели, контактные данные и комментарий.">
+  <title>Оставить заявку — Lumen</title>
   <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -12,221 +12,129 @@
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
   <header class="site-header">
-    <div class="site-header__inner container">
-      <a class="site-header__logo" href="index.html">
-        <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
-        <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
-      </a>
+    <div class="container site-header__inner">
+      <a class="site-header__logo" href="index.html">Lumen</a>
       <nav class="site-nav" aria-label="Основная навигация">
         <ul class="site-nav__list">
-          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Главная</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="catalog.html">Каталог</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="category.html">Ноутбуки</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="product.html">Карточка товара</a></li>
-          <li class="site-nav__item"><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
-          <li class="site-nav__item"><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link" href="index.html">Главная</a></li>
+          <li><a class="site-nav__link" href="catalog.html">Каталог</a></li>
+          <li><a class="site-nav__link" href="product.html">Товар</a></li>
+          <li><a class="site-nav__link site-nav__link--active" href="order.html" aria-current="page">Заявка</a></li>
+          <li><a class="site-nav__link" href="contacts.html">Контакты</a></li>
+          <li><a class="site-nav__link" href="index.html#popular">Популярное</a></li>
         </ul>
       </nav>
-      <div class="site-header__actions">
-        <button class="btn btn--primary btn--sm" type="button" data-modal-open="callback-modal">Оставить заявку</button>
-      </div>
     </div>
   </header>
 
-  <main id="main">
+  <main id="main" class="section">
     <div class="container">
       <nav class="breadcrumbs" aria-label="Хлебные крошки">
         <ol class="breadcrumbs__list">
-          <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Оформление заявки</span></li>
+          <li class="breadcrumbs__item"><a href="index.html">Главная</a></li>
+          <li class="breadcrumbs__item"><span class="breadcrumbs__current" aria-current="page">Заявка</span></li>
         </ol>
       </nav>
-    </div>
 
-    <section class="section" aria-labelledby="order-title">
-      <div class="container">
-        <div class="page-head">
-          <div class="page-head__inner">
-            <div>
-              <h1 class="page-head__title" id="order-title">Оформление заявки</h1>
-              <p class="page-head__text">Заполните форму — менеджер подтвердит наличие, цену и условия доставки.</p>
+      <div class="page-head">
+        <h1 class="page-head__title">Оставить заявку</h1>
+        <p class="page-head__text">Выберите модель и оставьте контакты — ответим на вопросы и подтвердим наличие.</p>
+      </div>
+
+      <div class="order-layout">
+        <form class="order-form" action="#" method="post">
+          <div class="order-form__grid">
+            <div class="order-form__field">
+              <label class="order-form__label" for="order-name">Имя <span class="order-form__required">*</span></label>
+              <input class="order-form__input" id="order-name" name="name" type="text" minlength="2" maxlength="50" autocomplete="name" required>
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="order-email">E-mail <span class="order-form__required">*</span></label>
+              <input class="order-form__input" id="order-email" name="email" type="email" placeholder="name@example.ru" autocomplete="email" required>
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="order-phone">Телефон <span class="order-form__required">*</span></label>
+              <input class="order-form__input" id="order-phone" name="phone" type="tel" inputmode="tel" placeholder="+7 900 000-00-00" pattern="\+7\s?[0-9]{3}\s?[0-9]{3}-?[0-9]{2}-?[0-9]{2}" title="Формат: +7 900 000-00-00" autocomplete="tel" required>
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="order-model">Модель <span class="order-form__required">*</span></label>
+              <select class="order-form__select" id="order-model" name="model" required>
+                <option value="">Выберите модель</option>
+                <option value="lumen-one">Lumen One — 3 490 ₽</option>
+                <option value="lumen-arc">Lumen Arc — 5 990 ₽</option>
+                <option value="lumen-mini">Lumen Mini — 2 790 ₽</option>
+                <option value="lumen-classic">Lumen Classic — 4 690 ₽</option>
+              </select>
+            </div>
+            <div class="order-form__field">
+              <label class="order-form__label" for="order-date">Желаемая дата связи</label>
+              <input class="order-form__input" id="order-date" name="contact-date" type="date">
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__label" for="order-comment">Комментарий</label>
+              <textarea class="order-form__textarea" id="order-comment" name="comment" rows="4" maxlength="300" placeholder="Дополнительная информация"></textarea>
+            </div>
+            <div class="order-form__field order-form__field--full">
+              <label class="order-form__checkbox" for="order-consent">
+                <input id="order-consent" name="consent" type="checkbox" required>
+                <span>Согласен на обработку персональных данных <span class="order-form__required">*</span></span>
+              </label>
             </div>
           </div>
-        </div>
 
-        <div class="contacts__layout">
-          <!-- Форма заявки -->
-          <form class="form-card order-form" action="#" method="post">
-            <p class="notice notice--success">🔒 Ваши данные защищены и не передаются третьим лицам.</p>
+          <input type="hidden" name="source" value="order-page">
+          <p class="form-message" role="status" hidden>Заявка отправлена. Мы свяжемся с вами в ближайшее время.</p>
+          <div class="order-form__actions">
+            <button class="button" type="submit">Отправить заявку</button>
+            <button class="button button--secondary" type="reset">Очистить</button>
+          </div>
+          <p class="order-form__note">Поля со звёздочкой обязательны.</p>
+        </form>
 
-            <div class="order-form__grid">
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-name">Имя <span class="order-form__required">*</span></label>
-                <input class="order-form__input" id="order-name" name="name" type="text" required placeholder="Иван Иванов" autocomplete="name">
-              </div>
-
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-email">E-mail <span class="order-form__required">*</span></label>
-                <input class="order-form__input" id="order-email" name="email" type="email" required placeholder="ivan@example.com" autocomplete="email">
-                <span class="order-form__hint">На этот адрес придёт подтверждение заявки.</span>
-              </div>
-
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-phone">Телефон <span class="order-form__required">*</span></label>
-                <input class="order-form__input" id="order-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
-              </div>
-
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-product">Товар <span class="order-form__required">*</span></label>
-                <select class="order-form__select" id="order-product" name="product" required>
-                  <option value="" disabled selected>Выберите товар</option>
-                  <option value="aurora-14-pro">Ноутбук Aurora 14 Pro — 129 990 ₽</option>
-                  <option value="nexus-x5">Смартфон Nexus X5 — 74 990 ₽</option>
-                  <option value="sonicbuds-pro">Наушники SonicBuds Pro — 12 990 ₽</option>
-                  <option value="pulse-s2">Умные часы Pulse S2 — 18 990 ₽</option>
-                  <option value="vortex-one">Игровая консоль Vortex One — 59 990 ₽</option>
-                </select>
-              </div>
-
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-city">Город доставки</label>
-                <input class="order-form__input" id="order-city" name="city" type="text" placeholder="Москва" autocomplete="address-level2">
-              </div>
-
-              <div class="order-form__field">
-                <label class="order-form__label" for="order-qty">Количество</label>
-                <input class="order-form__input" id="order-qty" name="quantity" type="number" min="1" max="10" value="1">
-              </div>
-
-              <fieldset class="order-form__field order-form__field--full order-form__fieldset">
-                <legend class="order-form__label">Способ оплаты</legend>
-                <div class="order-form__options">
-                  <label class="order-form__radio">
-                    <input type="radio" name="payment" value="card" checked>
-                    <span>Картой онлайн</span>
-                  </label>
-                  <label class="order-form__radio">
-                    <input type="radio" name="payment" value="cash">
-                    <span>При получении</span>
-                  </label>
-                  <label class="order-form__radio">
-                    <input type="radio" name="payment" value="installment">
-                    <span>Рассрочка 0%</span>
-                  </label>
-                </div>
-              </fieldset>
-
-              <div class="order-form__field order-form__field--full">
-                <label class="order-form__label" for="order-comment">Комментарий</label>
-                <textarea class="order-form__textarea" id="order-comment" name="comment" placeholder="Удобное время для звонка, пожелания по доставке и т. д."></textarea>
-              </div>
-
-              <div class="order-form__field order-form__field--full">
-                <label class="order-form__checkbox">
-                  <input type="checkbox" name="consent" required>
-                  <span>Я согласен на обработку персональных данных и принимаю условия <a href="#">политики конфиденциальности</a> <span class="order-form__required">*</span></span>
-                </label>
-              </div>
+        <aside aria-label="Как проходит заказ">
+          <div class="info-panel">
+            <h2 class="info-panel__title">Как проходит заказ</h2>
+            <div class="info-panel__list">
+              <div class="info-panel__row"><span>1. Заявка</span><span class="info-panel__value">1 минута</span></div>
+              <div class="info-panel__row"><span>2. Подтверждение</span><span class="info-panel__value">в течение дня</span></div>
+              <div class="info-panel__row"><span>3. Доставка</span><span class="info-panel__value">1–2 дня</span></div>
+              <div class="info-panel__row"><span>4. Оплата</span><span class="info-panel__value">при получении</span></div>
             </div>
-
-            <div class="order-form__actions">
-              <button class="btn btn--primary btn--lg" type="submit">Отправить заявку</button>
-              <button class="btn btn--ghost btn--lg" type="reset">Очистить</button>
-              <span class="order-form__note">Поля со звёздочкой обязательны.</span>
-            </div>
-          </form>
-
-          <!-- Боковая колонка -->
-          <aside aria-label="Как обрабатывается заявка">
-            <div class="info-panel">
-              <h2 class="info-panel__title">Как это работает</h2>
-              <ol class="info-panel__list">
-                <li class="info-panel__row"><span>1. Вы отправляете форму</span></li>
-                <li class="info-panel__row"><span>2. Менеджер звонит за 15 минут</span></li>
-                <li class="info-panel__row"><span>3. Подтверждаем наличие и цену</span></li>
-                <li class="info-panel__row"><span>4. Согласуем доставку и оплату</span></li>
-              </ol>
-            </div>
-
-            <div class="info-panel u-mt-lg">
-              <h2 class="info-panel__title">Нужна помощь?</h2>
-              <p class="site-footer__text u-muted">Позвоните нам или напишите — поможем выбрать технику.</p>
-              <p><a class="btn btn--outline btn--block" href="contacts.html">Все контакты</a></p>
-              <p class="u-m-0"><a href="tel:+74950000000">+7 (495) 000-00-00</a></p>
-            </div>
-          </aside>
-        </div>
+            <p class="order-form__note">Если не знаете, какую модель выбрать, укажите это в комментарии — поможем.</p>
+          </div>
+        </aside>
       </div>
-    </section>
+    </div>
   </main>
 
   <footer class="site-footer">
-    <div class="site-footer__grid container">
-      <div class="site-footer__col">
-        <a class="site-header__logo site-header__logo--light" href="index.html">
-          <img class="site-header__logo-image" src="images/logo.svg" alt="Логотип интернет-магазина ТехноМарт" width="40" height="40">
-          <span class="site-header__logo-text">Техно<span class="site-header__logo-accent">Март</span></span>
-        </a>
-        <p class="site-footer__text">Интернет-магазин электроники с 2015 года. Официальная гарантия, рассрочка и доставка по всей России.</p>
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <h2 class="site-footer__title">Lumen</h2>
+          <p class="site-footer__text">Небольшой каталог настольных ламп для дома и работы. Учебный проект по HTML и CSS.</p>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Разделы</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="index.html">Главная</a></li>
+            <li><a class="site-footer__link" href="catalog.html">Каталог</a></li>
+            <li><a class="site-footer__link" href="product.html">Lumen One</a></li>
+            <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2 class="site-footer__title">Контакты</h2>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="mailto:study@example.ru">study@example.ru</a></li>
+            <li><a class="site-footer__link" href="tel:+79000000000">+7 900 000-00-00</a></li>
+            <li><a class="site-footer__link" href="contacts.html">Все контакты</a></li>
+          </ul>
+        </div>
       </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Каталог</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="catalog.html">Все товары</a></li>
-          <li><a class="site-footer__link" href="category.html">Ноутбуки</a></li>
-          <li><a class="site-footer__link" href="product.html">Aurora 14 Pro</a></li>
-        </ul>
-      </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Покупателям</h2>
-        <ul class="site-footer__list">
-          <li><a class="site-footer__link" href="index.html#advantages">Преимущества</a></li>
-          <li><a class="site-footer__link" href="index.html#popular">Популярные товары</a></li>
-          <li><a class="site-footer__link" href="index.html#contacts">Контакты</a></li>
-          <li><a class="site-footer__link" href="order.html">Оформить заявку</a></li>
-        </ul>
-      </div>
-      <div class="site-footer__col">
-        <h2 class="site-footer__title">Свяжитесь с нами</h2>
-        <p class="site-footer__text">Москва, ул. Программистов, 15<br>+7 (495) 000-00-00<br>hello@technomart.example</p>
-        <a class="site-footer__link" href="contacts.html">Страница контактов →</a>
-      </div>
-    </div>
-    <div class="site-footer__bottom container">
-      <p>© <span data-current-year>2026</span> ТехноМарт. Контрольная работа №1.</p>
-      <p>Ларионов Роман Алексеевич, ЭФБО-15-25</p>
+      <p class="site-footer__bottom">© 2026 Lumen. Учебный проект. Ларионов Роман Алексеевич, ЭФБО-15-25.</p>
     </div>
   </footer>
-
-  <a class="to-top" href="#top" aria-label="Наверх">↑</a>
-
-  <dialog class="modal" id="callback-modal" aria-labelledby="callback-modal-title">
-    <form class="order-form" action="#" method="post">
-      <button class="modal__close" type="button" data-modal-close aria-label="Закрыть окно">&times;</button>
-      <h2 class="modal__title" id="callback-modal-title">Быстрая заявка</h2>
-      <p class="modal__text">Оставьте контакты — менеджер перезвонит в течение 15 минут.</p>
-      <div class="order-form__grid">
-        <div class="order-form__field">
-          <label class="order-form__label" for="modal-name">Имя <span class="order-form__required">*</span></label>
-          <input class="order-form__input" id="modal-name" name="name" type="text" required placeholder="Иван" autocomplete="name">
-        </div>
-        <div class="order-form__field">
-          <label class="order-form__label" for="modal-phone">Телефон <span class="order-form__required">*</span></label>
-          <input class="order-form__input" id="modal-phone" name="phone" type="tel" required placeholder="+7 (999) 123-45-67" autocomplete="tel">
-        </div>
-        <div class="order-form__field order-form__field--full">
-          <label class="order-form__checkbox">
-            <input type="checkbox" name="consent" required>
-            <span>Согласен на обработку персональных данных</span>
-          </label>
-        </div>
-      </div>
-      <div class="modal__actions">
-        <button class="btn btn--primary" type="submit">Отправить</button>
-        <button class="btn btn--ghost" type="button" data-modal-close>Отмена</button>
-      </div>
-    </form>
-  </dialog>
 
   <script src="js/main.js"></script>
 </body>
